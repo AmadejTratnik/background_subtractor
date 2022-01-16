@@ -23,7 +23,7 @@ $ (venv) pip3 install -r requirements.txt
 ## Background Subtraction
 To start real time background subtraction, simply write:
 ```
-$ (venv) python3 scripts/bacground_subtraction.py
+$ (venv) python3 scripts/background_subtraction.py
 ```
 
 By default, the script will run for 1000 frames, showing original picture, produced binary mask and final product of person's background subtraction in real time.
