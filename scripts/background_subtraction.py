@@ -13,7 +13,6 @@ import onnxruntime
 import torch.onnx
 import sys
 
-DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 IMAGE_HEIGHT = 360
 IMAGE_WIDTH = 640
@@ -71,6 +70,7 @@ while True:
     im_pil = np.array(Image.fromarray(img).convert("RGB"))
     augmentation = transform(image=im_pil)
     image = augmentation["image"]
+
     image = torch.unsqueeze(image, 0)
 
     ort_inputs = {ort_session.get_inputs()[0].name: to_numpy(image)}
@@ -80,8 +80,6 @@ while True:
     preds = torch.from_numpy(img_out_y)
     preds = torch.sigmoid(preds)
     preds = (preds > 0.7).float()
-    # preds = np.array(preds)
-
     preds = torch.squeeze(preds, 0)
     preds = F.to_pil_image(preds)
 
