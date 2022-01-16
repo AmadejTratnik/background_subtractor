@@ -1,0 +1,9 @@
+albumentations==0.5.2
+torch==1.7.1+cpu
+opencv-contrib-python==4.5.2.52
+opencv-python==4.5.3.56
+numpy==1.18.5
+Pillow==8.3.1
+torchvision==0.8.2+cpu
+psutil==5.8.0
+onnxruntime==1.8.0
