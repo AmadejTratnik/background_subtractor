@@ -28,6 +28,15 @@ $ (venv) python3 scripts/background_subtraction.py
 
 By default, the script will run for 1000 frames, showing original picture, produced binary mask and final product of person's background subtraction in real time.
 
+## Error Handling
+*The function is not implemented. Rebuild the library with Windows, GTK+ 2.x or Cocoa support*. 
+```
+$ (venv) pip3 uninstall opencv-python  
+```
+```
+$ (venv) pip3 install opencv-python  
+```
+These 2 commands seem to solve the case.
 ## Some more examples:
 
 ![Conference call 2](https://github.com/AmadejTratnik/background_subtractor/blob/main/images/conference_call2.gif)
